@@ -1,0 +1,31 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Tareas {% endblock %}
+
+{% block 'content' %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="alert-success" {% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<form class="search" method="GET" action="{% url 'todoIndex' %}">
+    <input class="search-bar" type="text" name="search" placeholder="buscar contacto...">
+    <input class="btn btn-search" type="submit" value="Buscar">
+</form>
+<span class="aux-btns"><a href="{% url 'todoIndex' %}">Ver todas</a> <a href="{% url 'todoCreate' %}">Añadir</a></span>
+    <ul class="list">
+        {% for todo in todos %}
+            <li>{{todo}}
+                <span>
+                    <a href="{% url 'todoView' id=todo.id %}" class="btn btn-detail">Ver</a>
+                    <a href="{% url 'todoDelete' id=todo.id %}" class="btn btn-delete">Borrar</a>
+                    <a href="{% url 'todoEdit' id=todo.id %}" class="btn btn-edit">Editar</a>
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

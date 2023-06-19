@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Crear tarea {% endblock %}
+
+{% block 'styles' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock %}
+
+{% block 'content' %}
+    <span class="aux-btns-form"><a href="{% url 'todoIndex' %}">Volver atras</a></span>
+    <form action="{% url 'todoCreate' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <div class="btn-wrapper">
+            <input class='btn-send' type="submit" value="Crear nueva tarea" name="CreateForm">
+        </div>
+    </form>
+{% endblock %}

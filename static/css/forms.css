@@ -1,0 +1,70 @@
+label {
+    padding: 5px;
+}
+
+form {
+    margin: 50px;
+}
+
+tr {
+    padding: 50px;
+}
+
+input {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--color-secondary);
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
+}
+
+.btn-send {
+    background-color: var(--color-primary);
+    color: white;
+    width: 80%;
+    cursor: pointer;
+    margin-right: -3px;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+textarea {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--color-secondary);
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
+}
+
+
+p {
+    width: 80%;
+    margin-right: -35px;
+    margin-top: 10px;
+}
+
+
+.aux-btns-form {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    margin: 35px 0px 0px 100px;
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.aux-btns-form a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.aux-btns-form a:hover {
+    color: black;
+}

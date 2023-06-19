@@ -1,0 +1,209 @@
+:root {
+    --color-primary: #3266a8;
+    --color-secondary: #a88c32;
+    --color-text: #666;
+    --font-main: infinity-bold;
+    --font-text: infinity-regular;
+}
+
+/* Main Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+    color: var(--color-text)
+}
+
+@font-face{
+    font-family: infinity-regular;
+    src: url('../fonts/infinity/Regular.otf')
+}
+
+@font-face{
+    font-family: infinity-bold;
+    src: url('../fonts/infinity/Black.otf')
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-main);
+}
+
+h1 {
+    margin-top: 20px;
+}
+/* End Main Settings */
+
+
+/* Layout Settings */
+
+nav {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--color-secondary);
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: beige;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    justify-content: space-around;
+    padding: 40px;
+}
+
+nav ul li a:hover {
+    color: black;;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-text);
+    border-radius: 10px;
+    width: 50%;
+    list-style-type: none;
+
+}
+
+.list li {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-text);
+}
+
+.list li a {
+    text-decoration: none;
+}
+
+.list li a:hover {
+    color: black;
+}
+
+.btn {
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn-detail {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-delete {
+    background-color: #c91616;
+    color: white;
+}
+
+.btn-edit {
+    background-color: green;
+    color: white;
+}
+
+.btn-search {
+    background-color: lightblue;
+    color: gray;
+    width: 19%;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    color: black;
+}
+
+.search {
+    margin-top: 30px;
+    width: 50%;
+}
+
+.search-bar {
+    padding: 5px;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+}
+
+.aux-btns {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 35px 0px 15px 0px;
+}
+
+.aux-btns a {
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.messages .alert-success {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    margin: 10px 10px 0 10px;
+    color: white;
+    border: solid 1px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Index settings */
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--color-primary);
+}
+
+.card:hover {
+    background-color: lightblue;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+    padding: 100px;
+}
+
+/* End index settings */
